@@ -1,0 +1,12 @@
+{% extends 'courses/base.html' %}
+
+{% block content %}
+    <div class="date">
+        <a class="btn btn-default" href="{% url 'course_edit' pk=course.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+    </div>
+    <h1>{{ course.title }}</h1>
+    <h2>{{ course.teacher }}</h2>
+    <h2>{{ course.classTime }}</h2>
+    <h2>{{ course.capacity }}</h2>
+    <p>{{ course.desc }}</p>
+{% endblock %}

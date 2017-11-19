@@ -53,8 +53,7 @@ class EnrollManager(models.Manager):
     def isExist(self, coursePK, userPK):
         course = get_object_or_404(Course, pk=coursePK)
         user = get_object_or_404(User, pk=userPK)
-        e = EnrollList.objects.filter(courseId=course)
-        e.filter(userId=user)
+        e = EnrollList.objects.filter(courseId=course, userId=user)
         return e.count()>0
 
 class EnrollList(models.Model):

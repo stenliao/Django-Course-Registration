@@ -49,7 +49,6 @@ def course_register(request, pk, upk):
     course = get_object_or_404(Course, pk=pk)
     user = get_object_or_404(User, pk=upk)
     isExist = EnrollList.objects.isExist(pk, upk)
-    print isExist
     if isExist == False:
         enroll = EnrollList.objects.create(courseId=course, userId=user)
         enroll.save()
@@ -58,10 +57,8 @@ def course_deregister(request, pk, upk):
     course = get_object_or_404(Course, pk=pk)
     user = get_object_or_404(User, pk=upk)
     isExist = EnrollList.objects.isExist(pk, upk)
-    print isExist
     if isExist == True:
         enroll = EnrollList.objects.filter(courseId=course, userId=user)
-        print enroll
         enroll.delete()
     return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
 # def user_list(request):
@@ -74,7 +71,6 @@ def user_detail(request, pk):
     totalUnits = 0
     for enroll in enrolls:
         totalUnits += enroll.courseId.unit
-    print totalUnits
 
     return render(request, 'courses/user_detail.html', {'user': user, 'enrolls': enrolls, 'totalUnits': totalUnits})
 

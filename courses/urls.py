@@ -13,7 +13,7 @@ urlpatterns = patterns('',
     # url(r'^course/(?P<pk>[0-9]+)/del/$', views.course_del, name='course_del'),
 
     # url(r'^user/new/$', views.user_new, name='user_new'),
-    # url(r'^user/(?P<pk>[0-9]+)/$', views.user_detail, name='user_detail'),
+    url(r'^user/(?P<pk>[0-9]+)/$', views.user_detail, name='user_detail'),
     # url(r'^user/(?P<pk>[0-9]+)/edit/$', views.user_edit, name='user_edit'),
     # # url(r'^user/(?P<pk>[0-9]+)/del/$', views.user_del, name='user_del'),
     # url(r'^user/$', views.user_list),

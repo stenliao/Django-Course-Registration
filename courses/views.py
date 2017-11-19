@@ -6,6 +6,9 @@ from .forms import CourseForm
 from django.core.urlresolvers import reverse
 from django.shortcuts import redirect
 from django.contrib.auth.models import User
+from django.core import serializers
+from django.http import HttpResponseRedirect
+from django.db.models import Sum
 
 import json
 
@@ -50,9 +53,7 @@ def course_register(request, pk, upk):
     if isExist == False:
         enroll = EnrollList.objects.create(courseId=course, userId=user)
         enroll.save()
-        return redirect('courses.views.course_detail', pk=pk)
-    else:
-        return redirect('courses.views.course_detail', pk=pk)
+    return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
 def course_deregister(request, pk, upk):
     course = get_object_or_404(Course, pk=pk)
     user = get_object_or_404(User, pk=upk)
@@ -62,17 +63,21 @@ def course_deregister(request, pk, upk):
         enroll = EnrollList.objects.filter(courseId=course, userId=user)
         print enroll
         enroll.delete()
-        return redirect('courses.views.course_detail', pk=pk)
-    else:
-        return redirect('courses.views.course_detail', pk=pk)
+    return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
 # def user_list(request):
 #     users= User.objects.filter().order_by('id')
 #     return render(request, 'courses/user_list.html', {'users': users})
 #
-# def user_detail(request, pk):
-#     user= get_object_or_404(User, pk=pk)
-#     return render(request, 'courses/user_detail.html', {'user': user})
-#
+def user_detail(request, pk):
+    user= get_object_or_404(User, pk=pk)
+    enrolls = EnrollList.objects.filter(userId=user).select_related()
+    totalUnits = 0
+    for enroll in enrolls:
+        totalUnits += enroll.courseId.unit
+    print totalUnits
+
+    return render(request, 'courses/user_detail.html', {'user': user, 'enrolls': enrolls, 'totalUnits': totalUnits})
+
 # def user_new(request):
 #     if request.method == "POST":
 #         form = UserForm(request.POST)

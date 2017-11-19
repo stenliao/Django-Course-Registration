@@ -1,12 +1,35 @@
 {% extends 'courses/base.html' %}
 
 {% block content %}
-    <div class="date">
-        <a class="btn btn-default" href="{% url 'user_edit' pk=user.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+
+    <div class="table-responsive">
+            <table  class="table-striped table-bordered">
+                <thead><td>Name</td><td>Instructor</td><td>Date/Time</td><td>Unit</td><td>Status</td><td>Action</td></thead>
+                <tbody>
+
+                    {% for enroll in enrolls %}
+                    <tr>
+                    <td>
+                        <a href="{% url 'course_detail' pk=enroll.courseId.pk %}">{{ enroll.courseId.name }}</a>
+                    </td>
+                    <td>
+                        {{enroll.courseId.instructor}}
+                    <td>
+                        {{enroll.courseId.get_weekday_display}} {{ enroll.courseId.get_start_display }} to {{enroll.courseId.get_end_display}}
+                    </td>
+                    <td>
+                        {{enroll.courseId.unit}}
+                    </td>
+                    <td>
+                        Registered
+                    </td>
+                    <td>
+                        <span><a href="{% url 'course_deregister' pk=enroll.courseId.pk upk=user.pk %}">drop this course</a></span>
+                    </td>
+                    </tr>
+                    {% endfor %}
+                    <tr><td>Total Units</td><td>{{totalUnits}}</td></tr>
+                </tbody>
+            </table>
     </div>
-    <h1>{{ user.userName }}</h1>
-    <h2>{{ user.password }}</h2>
-    <h2>{{ user.firstName }}</h2>
-    <h2>{{ user.lastName }}</h2>
-    <p>{{ user.email }}</p>
 {% endblock %}

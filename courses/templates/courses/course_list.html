@@ -2,8 +2,8 @@
 {% block content %}
     {% for course in courses %}
         <div class="post">
-            <h1><a href="{% url 'course_detail' pk=course.pk %}">{{ course.title }}</a></h1>
-            <p>{{ coure.desc|linebreaks }}</p>
+            <h1><a href="{% url 'course_detail' pk=course.pk %}">{{ course.name }}</a></h1>
+            <p>{{ course.desc|linebreaks }}</p>
         </div>
     {% endfor %}
 {% endblock content %}

@@ -22,12 +22,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = '@#x9t_v*v*apue)-p3o(r+bngx+37ka$zxn%xevxb1-9!mzr^y'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com']
 
 TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
+LOGIN_REDIRECT_URL = '/course/'
 
 
 # Application definition
@@ -101,8 +102,6 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 ALLOWED_HOSTS = ['*']
 
 STATIC_ROOT = 'staticfiles'
-
-DEBUG = False
 
 STATIC_URL = '/static/'
 try:

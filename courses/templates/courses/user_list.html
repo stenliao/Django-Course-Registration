@@ -1,0 +1,10 @@
+{% extends 'courses/base.html' %}
+{% block content %}
+    {% for user in users %}
+        <div class="post">
+            <h1><a href="{% url 'user_detail' pk=user.pk %}">{{ user.userName }}</a></h1>
+            <p>{{ user.firstName}</p>
+            <p>{{ user.lastName}</p>
+        </div>
+    {% endfor %}
+{% endblock content %}

@@ -4,9 +4,16 @@
     <div class="date">
         <a class="btn btn-default" href="{% url 'course_edit' pk=course.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
     </div>
-    <h1>{{ course.title }}</h1>
+    {% if isExist %}
+    <span><a href="{% url 'course_deregister' pk=course.pk upk=user.pk %}">deregister</a></span>
+    {% else %}
+    <span><a href="{% url 'course_register' pk=course.pk upk=user.pk %}">register</a></span>
+    {% endif %}
+    <h1>{{ course.name }}</h1>
     <h2>{{ course.teacher }}</h2>
-    <h2>{{ course.classTime }}</h2>
-    <h2>{{ course.capacity }}</h2>
     <p>{{ course.desc }}</p>
+    <h2>{{ course.get_weekday_display }}</h2>
+    <h2>{{ course.get_start_display }}</h2>
+    <h2>{{ course.get_end_display }}</h2>
+    <h2>{{ course.capacity }}</h2>
 {% endblock %}

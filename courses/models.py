@@ -26,13 +26,16 @@ class Course(models.Model):
         (17, '17:00'),
         (18, '18:00'),
     )
+    number= models.CharField(max_length=200)
     name= models.CharField(max_length=200)
     desc = models.TextField()
-    teacher = models.CharField(max_length=50)
+    instructor = models.CharField(max_length=50)
     weekday = models.IntegerField(choices=DAYS_OF_WEEK,default=1)
     start = models.IntegerField(choices=DATE_OF_DAY,default=1)
     end = models.IntegerField(choices=DATE_OF_DAY,default=1)
     capacity = models.IntegerField()
+    room = models.IntegerField()
+    unit = models.IntegerField()
 
     def __str__(self):
         return self.name

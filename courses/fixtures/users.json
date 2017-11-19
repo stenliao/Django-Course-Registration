@@ -1,0 +1,100 @@
+[
+{
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$24000$L16nVP6WMEW7$0pzU/GpMjyoRhGs6A48YpC6dtDvRG4CdGdTxxCcSdTw=",
+        "last_login": "2017-11-19T10:06:43.481",
+        "is_superuser": true,
+        "username": "admin",
+        "first_name": "",
+        "last_name": "",
+        "email": "admin@tt.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2017-11-19T10:06:36.634",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$24000$VPwJvKcaQxJ1$uUu8QyKP3HCVBcMfZSi1AmNujWQH2b/sGcJlPg0zKzI=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "fanlei",
+        "first_name": "Fanlei",
+        "last_name": "Liao",
+        "email": "faneli@cmu.edu",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2017-11-19T10:31:26",
+        "groups": [
+            1
+        ],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 3,
+    "fields": {
+        "password": "pbkdf2_sha256$24000$VPwJvKcaQxJ1$uUu8QyKP3HCVBcMfZSi1AmNujWQH2b/sGcJlPg0zKzI=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "nick",
+        "first_name": "Nick",
+        "last_name": "Chang",
+        "email": "nick@cmu.edu",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2017-11-19T10:31:26",
+        "groups": [
+            1
+        ],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 4,
+    "fields": {
+        "password": "pbkdf2_sha256$24000$VPwJvKcaQxJ1$uUu8QyKP3HCVBcMfZSi1AmNujWQH2b/sGcJlPg0zKzI=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "allen",
+        "first_name": "Allen",
+        "last_name": "Chen",
+        "email": "allen@cmu.edu",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2017-11-19T10:31:26",
+        "groups": [
+            1
+        ],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 5,
+    "fields": {
+        "password": "pbkdf2_sha256$24000$VPwJvKcaQxJ1$uUu8QyKP3HCVBcMfZSi1AmNujWQH2b/sGcJlPg0zKzI=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "kevin",
+        "first_name": "Kevin",
+        "last_name": "Hsu",
+        "email": "kevin@cmu.edu",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2017-11-19T10:31:26",
+        "groups": [
+            1
+        ],
+        "user_permissions": []
+    }
+}
+]

@@ -6,7 +6,7 @@ from .models import Course
 class CourseForm(forms.ModelForm):
     class Meta:
         model = Course
-        fields = ('name', 'desc', 'teacher','weekday','start','end', 'capacity')
+        fields = ('number','name', 'desc', 'instructor','weekday','start','end', 'capacity','unit','room')
         #widgets = { 'weekday': forms.ChoiceField}
 
 

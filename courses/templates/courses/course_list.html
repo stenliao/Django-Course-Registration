@@ -1,9 +1,25 @@
 {% extends 'courses/base.html' %}
 {% block content %}
-    {% for course in courses %}
-        <div class="post">
-            <h1><a href="{% url 'course_detail' pk=course.pk %}">{{ course.name }}</a></h1>
-            <p>{{ course.desc|linebreaks }}</p>
-        </div>
-    {% endfor %}
+<div class="table-responsive">
+        <table  class="table-striped table-bordered">
+            <thead><td>Name</td><td>Instructor</td><td>Date/Time</td><td>Unit</td></thead>
+            <tbody>
+                {% for course in courses %}
+                <tr>
+                <td>
+                    <a href="{% url 'course_detail' pk=course.pk %}">{{ course.name }}</a>
+                </td>
+                <td>
+                    {{course.instructor}}
+                <td>
+                    {{course.get_weekday_display}} {{ course.get_start_display }} to {{course.get_end_display}}
+                </td>
+                <td>
+                    {{course.unit}}
+                </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
 {% endblock content %}

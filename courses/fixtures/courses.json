@@ -1,0 +1,82 @@
+[
+{
+    "model": "courses.course",
+    "pk": 1,
+    "fields": {
+        "number": "18636",
+        "name": "BROWSER SECURITY",
+        "desc": "The Web continues to grow in popularity as platform for retail transactions, financial services, and rapidly evolving forms of communication. It is becoming an increasingly attractive target for attackers who wish to compromise users' systems or steal data from other sites. Browser vendors must stay ahead of these attacks by providing features that support secure web applications. This course will study vulnerabilities in existing web browsers and the applications they render, as well as new technologies that enable web applications that were never before possible. The material will be largely based on current research problems, and students will be expected to criticize and improve existing defenses. Topics of study include (but are not limited to) browser encryption, JavaScript security, plug-in security, sandboxing, web mashups, and authentication. The course will involve an intensive group research project focusing on protocols/algorithms, vulnerabilities, and attacks as well as several individual homework and programming tasks. Groups will perform a sequence of cumulative tasks (literature review, analysis, simulation, design, implementation) to address aspect",
+        "instructor": "Jia",
+        "weekday": 5,
+        "start": 10,
+        "end": 11,
+        "capacity": 50,
+        "room": 109,
+        "unit": 12
+    }
+},
+{
+    "model": "courses.course",
+    "pk": 2,
+    "fields": {
+        "number": "15619",
+        "name": "CLOUD COMPUTING",
+        "desc": "The Web continues to grow in popularity as platform for retail transactions, financial services, and rapidly evolving forms of communication. It is becoming an increasingly attractive target for attackers who wish to compromise users' systems or steal data from other sites. Browser vendors must stay ahead of these attacks by providing features that support secure web applications. This course will study vulnerabilities in existing web browsers and the applications they render, as well as new technologies that enable web applications that were never before possible. The material will be largely based on current research problems, and students will be expected to criticize and improve existing defenses. Topics of study include (but are not limited to) browser encryption, JavaScript security, plug-in security, sandboxing, web mashups, and authentication. The course will involve an intensive group research project focusing on protocols/algorithms, vulnerabilities, and attacks as well as several individual homework and programming tasks. Groups will perform a sequence of cumulative tasks (literature review, analysis, simulation, design, implementation) to address aspect",
+        "instructor": "Jia",
+        "weekday": 5,
+        "start": 8,
+        "end": 9,
+        "capacity": 50,
+        "room": 120,
+        "unit": 12
+    }
+},
+{
+    "model": "courses.course",
+    "pk": 3,
+    "fields": {
+        "number": "18600",
+        "name": "Foundations of Computer Systems",
+        "desc": "This course provides a programmers view of how computer systems execute programs, store information, and communicate. It enables students to become more effective programmers, especially in dealing with issues of performance, portability and robustness. It also serves as a foundation for courses on compilers, networks, operating systems, and computer architecture, where a deeper understanding of systems-level issues is required. Topics covered include: machine-level code and its generation by optimizing compilers, performance evaluation and optimization, computer arithmetic, processor architecture, memory organization and management, networking technology and protocols, and supporting concurrent computation. This course is modeled after 15-213/18-213/15-513, and is intended for ECE MS students with expanded course contents presented at the graduate level. It prepares students for other graduate level computer systems courses as well as working in the industry. Anti-requisites: 15213, 18213, 15513",
+        "instructor": "Shen, John",
+        "weekday": 3,
+        "start": 11,
+        "end": 12,
+        "capacity": 50,
+        "room": 120,
+        "unit": 12
+    }
+},
+{
+    "model": "courses.course",
+    "pk": 4,
+    "fields": {
+        "number": "18632",
+        "name": "Introduction to Hardware Security",
+        "desc": "This course covers basic concepts in the security of hardware systems. Topics covered include active and passive attacks, reverse engineering, counterfeiting, and design of hardware security primitives (e.g., random number generators, physical unclonable functions, crypto-processors). Lab sessions will give students hands on experience with performing attacks, developing countermeasures, and implementing secure hardware building blocks. Students are expected to have basic knowledge of digital logic and Register-Transfer Level (RTL) design, but no specific background in security/cryptography is necessary.",
+        "instructor": "Mai, Kenneth",
+        "weekday": 2,
+        "start": 11,
+        "end": 12,
+        "capacity": 50,
+        "room": 121,
+        "unit": 12
+    }
+},
+{
+    "model": "courses.course",
+    "pk": 5,
+    "fields": {
+        "number": "18653",
+        "name": "Software Architecture and Design",
+        "desc": "Software Architecture and Design is a one-semester course, aiming to train our graduate students from software engineers toward becoming a Software Architect, who is the Technical Lead of a software project team. The primary objective of the course is to help students develop skills in designing, developing, and justifying reasonable software architecture for enterprise-scale software-intensive systems, considering both functional and non-functional requirements as well as contextual system environments. Core topics include: overview of software architecture, micro architectural patterns (so-called design patterns) and macro architectural patterns (i.e., modern patterns), service oriented architecture, architectural modeling, viewpoints and perspectives, architectural analysis techniques, architectural tactics (QoS), agile architecture, and some advanced topics. Literature survey and study of state-of-the-art technologies, as well as both individual and group project work, are essential ingredients of this class. Research and practical projects build upon one another. Please note that this course is intended for ECE master students with a concentration in Software Engineering and will satisfy the Software Engineering and Design requirement. Anti-requisites: 17-655 from CS Dept. Pre-requisites: 18-652",
+        "instructor": "Zhang, Jia",
+        "weekday": 5,
+        "start": 14,
+        "end": 15,
+        "capacity": 50,
+        "room": 118,
+        "unit": 12
+    }
+}
+]

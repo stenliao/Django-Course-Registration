@@ -4,8 +4,8 @@
     <div class="date">
         <a cddlass="btn btn-default" href="{% url 'course_edit' pk=course.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
     </div>
-
-    <table class="table-striped table-bordered">
+    <div class="table-responsive">
+    <table class="table table-striped table-bordered">
         <tbody>
         <tr><td>Course Name</td><td>{{ course.number }}::{{ course.name }}</td></tr>
         <tr><td>Instructor</td><td>{{ course.instructor }}</td></tr>
@@ -33,4 +33,5 @@
         {% endif %}
         </tbody>
     </table>
+    </div>
 {% endblock %}

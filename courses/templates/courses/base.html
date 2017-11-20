@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>Another Courses Registration System</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -22,12 +23,12 @@
             <ul class="nav navbar-nav">
                 {% if user.is_authenticated %}
                 <li>User: {{ user.get_username }}</li>
-                <li class="active"><a href="/"><span class="glyphicon glyphicon-list-alt"> Courses List</span></a></li>
+                <li><a href="/"><span class="glyphicon glyphicon-list-alt"> Courses List</span></a></li>
                 <li><a href="{% url 'courses.views.course_new' %}"><span class="glyphicon glyphicon-plus"> Add New Course</span></a></li>
                 <li><a href="{% url 'courses.views.user_detail' pk=user.pk %}"><span class="glyphicon glyphicon-calendar"> My Schedule</span></a></li>
                 <li><a href="{% url 'logout'%}?next={{request.path}}"><span class="glyphicon glyphicon-log-out"> Logout</span></a></li>
                 {% else %}
-                <li class="active"><a href="/"><span class="glyphicon glyphicon-list-alt"> Courses List</span></a></li>
+                <li><a href="/"><span class="glyphicon glyphicon-list-alt"> Courses List</span></a></li>
                 <li><a href="{% url 'login'%}?next={{request.path}}"><span class="glyphicon glyphicon-log-in"> Login</span></a></li>
                 {% endif %}
             </ul>

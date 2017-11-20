@@ -28,7 +28,7 @@ ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com']
 TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
-LOGIN_REDIRECT_URL = '/course/'
+LOGIN_REDIRECT_URL = '/courses/'
 
 
 # Application definition

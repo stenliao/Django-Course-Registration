@@ -1,14 +1,14 @@
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, get_object_or_404
-from .models import Course
-from .models import EnrollList
-from .forms import CourseForm
 from django.core.urlresolvers import reverse
 from django.shortcuts import redirect
 from django.contrib.auth.models import User
 from django.core import serializers
 from django.http import HttpResponseRedirect
 from django.db.models import Sum
+from .models import Course
+from .models import EnrollList
+from .forms import CourseForm
 
 import json
 
@@ -35,6 +35,7 @@ def course_new(request):
     else:
         form = CourseForm()
     return render(request, 'courses/course_edit.html', {'form': form})
+
 def course_edit(request, pk):
     course = get_object_or_404(Course, pk=pk)
     if request.method == "POST":
@@ -55,6 +56,7 @@ def course_register(request, pk, upk):
         enroll = EnrollList.objects.create(courseId=course, userId=user)
         enroll.save()
     return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+
 def course_deregister(request, pk, upk):
     course = get_object_or_404(Course, pk=pk)
     user = get_object_or_404(User, pk=upk)
@@ -63,38 +65,11 @@ def course_deregister(request, pk, upk):
         enroll = EnrollList.objects.filter(courseId=course, userId=user)
         enroll.delete()
     return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
-# def user_list(request):
-#     users= User.objects.filter().order_by('id')
-#     return render(request, 'courses/user_list.html', {'users': users})
-#
+
 def user_detail(request, pk):
     user= get_object_or_404(User, pk=pk)
     enrolls = EnrollList.objects.filter(userId=user).select_related()
     totalUnits = 0
     for enroll in enrolls:
         totalUnits += enroll.courseId.unit
-
     return render(request, 'courses/user_detail.html', {'user': user, 'enrolls': enrolls, 'totalUnits': totalUnits})
-
-# def user_new(request):
-#     if request.method == "POST":
-#         form = UserForm(request.POST)
-#         if form.is_valid():
-#             user = form.save(commit=False)
-#             user.save()
-#             return redirect('courses.views.user_detail', pk=user.pk)
-#     else:
-#         form = UserForm()
-#     return render(request, 'courses/user_edit.html', {'form': form})
-#
-# def user_edit(request, pk):
-#     user= get_object_or_404(User, pk=pk)
-#     if request.method == "POST":
-#         form = UserForm(request.POST, instance=user)
-#         if form.is_valid():
-#             user= form.save(commit=False)
-#             user.save()
-#             return redirect('courses.views.user_detail', pk=user.pk)
-#     else:
-#         form = UserForm(instance=user)
-#     return render(request, 'courses/user_edit.html', {'form': form})

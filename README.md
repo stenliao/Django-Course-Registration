@@ -1,7 +1,7 @@
 # Django-Course-Registration
 [![BCH compliance](https://bettercodehub.com/edge/badge/stenliao/Django-Course-Registration?branch=master)](https://bettercodehub.com/)
 
-A practice for Django Framwork
+Use Django framework to create a simple course registration system
 
 # Technologies
 * Bootstrap 

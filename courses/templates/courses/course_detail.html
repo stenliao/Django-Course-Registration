@@ -1,9 +1,6 @@
 {% extends 'courses/base.html' %}
 
 {% block content %}
-    <div class="date">
-        <a cddlass="btn btn-default" href="{% url 'course_edit' pk=course.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
-    </div>
     <div class="table-responsive">
     <table class="table table-striped table-bordered">
         <tbody>
@@ -24,11 +21,12 @@
         <tr><td>Action</td>
             <td>
                 {% if isExist %}
-                <span><a href="{% url 'course_deregister' pk=course.pk upk=user.pk %}">drop this course</a></span>
+                <a class="btn btn-primary btn-sm" href="{% url 'course_deregister' pk=course.pk upk=user.pk %}">Drop</a>
                 {% else %}
-                <span><a href="{% url 'course_register' pk=course.pk upk=user.pk %}">register this course</a></span>
+                <a class="btn btn-primary btn-sm" href="{% url 'course_register' pk=course.pk upk=user.pk %}">Register</a>
                 {% endif %}
-            </td>
+                <a class="btn btn-primary btn-sm" role="button" href="{% url 'course_edit' pk=course.pk %}">Edit</a>
+                <a class="btn btn-primary btn-sm" role="button" href="{% url 'course_delete' pk=course.pk %}">Delete</a>            </td>
         </tr>
         {% endif %}
         </tbody>

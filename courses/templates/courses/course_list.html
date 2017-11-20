@@ -2,7 +2,11 @@
 {% block content %}
 <div class="table-responsive">
         <table  class="table table-striped table-bordered">
-            <thead><td>Number</td><td>Name</td><td>Instructor</td><td>Date/Time</td><td>Unit</td></thead>
+            <thead><td>Number</td><td>Name</td><td>Instructor</td><td>Date/Time</td><td>Unit</td>
+                {% if user.is_authenticated %}
+                <td>Action</td>
+                {% endif %}
+            </thead>
             <tbody>
                 {% for course in courses %}
                 <tr>
@@ -20,6 +24,12 @@
                 <td>
                     {{course.unit}}
                 </td>
+                {% if user.is_authenticated %}
+                <td>
+                    <a class="btn btn-primary btn-sm" role="button" href="{% url 'course_edit' pk=course.pk %}">Edit</a>
+                    <a class="btn btn-primary btn-sm" role="button" href="{% url 'course_delete' pk=course.pk %}">Delete</a>
+                </td>
+                {% endif %}
                 </tr>
                 {% endfor %}
             </tbody>

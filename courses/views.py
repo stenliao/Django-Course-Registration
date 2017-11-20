@@ -48,6 +48,11 @@ def course_edit(request, pk):
         form = CourseForm(instance=course)
     return render(request, 'courses/course_edit.html', {'form': form})
 
+def course_delete(request, pk):
+    course = get_object_or_404(Course, pk=pk)
+    course.delete()
+    return redirect('/')
+
 def course_register(request, pk, upk):
     course = get_object_or_404(Course, pk=pk)
     user = get_object_or_404(User, pk=upk)

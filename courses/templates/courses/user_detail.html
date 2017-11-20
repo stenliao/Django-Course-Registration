@@ -127,7 +127,7 @@
                         Registered
                     </td>
                     <td>
-                        <span><a href="{% url 'course_deregister' pk=enroll.courseId.pk upk=user.pk %}">drop this course</a></span>
+                        <a class="btn btn-primary btn-sm" href="{% url 'course_deregister' pk=enroll.courseId.pk upk=user.pk %}">Drop</a>
                     </td>
                     </tr>
                     {% endfor %}

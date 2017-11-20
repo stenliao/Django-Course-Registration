@@ -5,16 +5,13 @@ from django.contrib.auth.models import User
 
 class Course(models.Model):
     DAYS_OF_WEEK = (
-        (1, 'Sunday'),
         (2, 'Monday'),
         (3, 'Tuesday'),
         (4, 'Wednesday'),
         (5, 'Thursday'),
         (6, 'Friday'),
-        (7, 'Saturday'),
     )
     DATE_OF_DAY = (
-        (8, '08:00'),
         (9, '09:00'),
         (10, '10:00'),
         (11, '11:00'),

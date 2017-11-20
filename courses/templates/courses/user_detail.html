@@ -35,7 +35,7 @@
                 {% for enroll in enrolls %}
                     {% if enroll.courseId.weekday == 2 %}
                     <li class="single-event" data-start="{{enroll.courseId.start}}:00" data-end="{{enroll.courseId.end}}:00" data-content="{{enroll.courseId.number}}" data-event="event-1">
-							<em class="event-name">{{enroll.courseId.number}}::{{enroll.courseId.name}}</em>
+							<em class="event-name">{{ enroll.courseId.get_start_display }} to {{enroll.courseId.get_end_display}} {{enroll.courseId.number}}::{{enroll.courseId.name}}</em>
 					</li>
                     {% endif %}
                 {% endfor %}
@@ -49,7 +49,7 @@
                 {% for enroll in enrolls %}
                     {% if enroll.courseId.weekday == 3 %}
                     <li class="single-event" data-start="{{enroll.courseId.start}}:00" data-end="{{enroll.courseId.end}}:00" data-content="{{enroll.courseId.number}}" data-event="event-1">
-                            <em class="event-name">{{enroll.courseId.number}}::{{enroll.courseId.name}}</em>
+                            <em class="event-name">{{ enroll.courseId.get_start_display }} to {{enroll.courseId.get_end_display}} {{enroll.courseId.number}}::{{enroll.courseId.name}}</em>
                     </li>
                     {% endif %}
                 {% endfor %}
@@ -64,7 +64,7 @@
                 {% for enroll in enrolls %}
                     {% if enroll.courseId.weekday == 4 %}
                     <li class="single-event" data-start="{{enroll.courseId.start}}:00" data-end="{{enroll.courseId.end}}:00" data-content="{{enroll.courseId.number}}" data-event="event-1">
-                            <em class="event-name">{{enroll.courseId.number}}::{{enroll.courseId.name}}</em>
+                            <em class="event-name">{{ enroll.courseId.get_start_display }} to {{enroll.courseId.get_end_display}} {{enroll.courseId.number}}::{{enroll.courseId.name}}</em>
                     </li>
                     {% endif %}
                 {% endfor %}
@@ -79,7 +79,7 @@
                 {% for enroll in enrolls %}
                     {% if enroll.courseId.weekday == 5 %}
                     <li class="single-event" data-start="{{enroll.courseId.start}}:00" data-end="{{enroll.courseId.end}}:00" data-content="{{enroll.courseId.number}}" data-event="event-1">
-                            <em class="event-name">{{enroll.courseId.number}}::{{enroll.courseId.name}}</em>
+                            <em class="event-name">{{ enroll.courseId.get_start_display }} to {{enroll.courseId.get_end_display}} {{enroll.courseId.number}}::{{enroll.courseId.name}}</em>
                     </li>
                     {% endif %}
                 {% endfor %}
@@ -94,7 +94,7 @@
                 {% for enroll in enrolls %}
                     {% if enroll.courseId.weekday == 6 %}
                     <li class="single-event" data-start="{{enroll.courseId.start}}:00" data-end="{{enroll.courseId.end}}:00" data-content="{{enroll.courseId.number}}" data-event="event-1">
-                            <em class="event-name">{{enroll.courseId.number}}::{{enroll.courseId.name}}</em>
+                            <em class="event-name">{{ enroll.courseId.get_start_display }} to {{enroll.courseId.get_end_display}} {{enroll.courseId.number}}::{{enroll.courseId.name}}</em>
                     </li>
                     {% endif %}
                 {% endfor %}

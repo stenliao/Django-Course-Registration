@@ -4,9 +4,9 @@
     "pk": 1,
     "fields": {
         "number": "18636",
-        "name": "BROWSER SECURITY",
+        "name": "Browser Security",
         "desc": "The Web continues to grow in popularity as platform for retail transactions, financial services, and rapidly evolving forms of communication. It is becoming an increasingly attractive target for attackers who wish to compromise users' systems or steal data from other sites. Browser vendors must stay ahead of these attacks by providing features that support secure web applications. This course will study vulnerabilities in existing web browsers and the applications they render, as well as new technologies that enable web applications that were never before possible. The material will be largely based on current research problems, and students will be expected to criticize and improve existing defenses. Topics of study include (but are not limited to) browser encryption, JavaScript security, plug-in security, sandboxing, web mashups, and authentication. The course will involve an intensive group research project focusing on protocols/algorithms, vulnerabilities, and attacks as well as several individual homework and programming tasks. Groups will perform a sequence of cumulative tasks (literature review, analysis, simulation, design, implementation) to address aspect",
-        "instructor": "Jia",
+        "instructor": "Jia, Limin",
         "weekday": 5,
         "start": 10,
         "end": 11,
@@ -20,9 +20,9 @@
     "pk": 2,
     "fields": {
         "number": "15619",
-        "name": "CLOUD COMPUTING",
-        "desc": "The Web continues to grow in popularity as platform for retail transactions, financial services, and rapidly evolving forms of communication. It is becoming an increasingly attractive target for attackers who wish to compromise users' systems or steal data from other sites. Browser vendors must stay ahead of these attacks by providing features that support secure web applications. This course will study vulnerabilities in existing web browsers and the applications they render, as well as new technologies that enable web applications that were never before possible. The material will be largely based on current research problems, and students will be expected to criticize and improve existing defenses. Topics of study include (but are not limited to) browser encryption, JavaScript security, plug-in security, sandboxing, web mashups, and authentication. The course will involve an intensive group research project focusing on protocols/algorithms, vulnerabilities, and attacks as well as several individual homework and programming tasks. Groups will perform a sequence of cumulative tasks (literature review, analysis, simulation, design, implementation) to address aspect",
-        "instructor": "Jia",
+        "name": "Cloud Computing",
+        "desc": "This course gives students an overview of Cloud Computing, which is the delivery of computing as a service over a network, whereby distributed resources are rented, rather than owned, by an end user as a utility. Students will study its enabling technologies, building blocks, and gain hands-on experience through projects utilizing public cloud infrastructures. Cloud computing services are widely adopted by many organizations across domains. The course will introduce the cloud and cover the topics of data centers, software stack, virtualization, software defined networks and storage, cloud storage, and programming models. We will start by discussing the clouds motivating factors, benefits, challenges, service models, SLAs and security. We will describe several concepts behind data center design and management, which enable the economic and technological benefits of the cloud paradigm. Next, we will study how CPU, memory and I/O resources, network (SDN) and storage (SDS) are virtualized, and the key role of virtualization to enable the cloud. Subsequently, students will study cloud storage concepts like data distribution, durability, consistency and redundancy. We will discuss distributed file systems, NoSQL databases and object storage using HDFS, CephFS, HBASE, MongoDB, Cassandra, DynamoDB, S3, and Swift as case studies. Finally, students will study the MapReduce, Spark and GraphLab programming models. Students will work with Amazon Web Services and Microsoft Azure, to rent and provision compute resources and then program and deploy applications using these resources. Students will develop and evaluate scaling and load balancing solutions, work with cloud storage systems, and develop applications in several programming paradigms. 15619 students must complete an extra team project which entails designing and implementing a cost- and performance-sensitive web-service for querying big data.",
+        "instructor": "Sakr, Majd",
         "weekday": 5,
         "start": 8,
         "end": 9,
@@ -76,6 +76,86 @@
         "end": 15,
         "capacity": 50,
         "room": 118,
+        "unit": 12
+    }
+},
+{
+    "model": "courses.course",
+    "pk": 6,
+    "fields": {
+        "number": "18659",
+        "name": "Software Engineering Methods",
+        "desc": "There has been a rapid evolution of software engineering development methods over the past decades. From Waterfall to Iterative and Incremental, to Agile and Lean, we have witnessed waves of new methods, each adding significant value to the field. However, the plethora of available methods poses a challenge for software practitioners: Which method should be adopted on a specific software project? Software Engineering Methods addresses this challenge by introducing students to emerging approaches for developing software-intensive systems. Given the vast spectrum of software development endeavors, these approaches aim at defining custom hybrid methods by focusing on software development principles and practices together with their applicability to specific project contexts. Students learn to analyze the context of a software project and recommend a custom hybrid development method that satisfies the projects specific needs. Students apply this knowledge in the context of a semester-long project where the entire class works together as a team of teams. They define the optimal software development method for their project aimed at evolving an existing software system. They build new system increments by adopting their own method. They monitor their progress and reflect on the effectiveness of their approach and the need for continuous improvement. This course is intended for ECE master students with a concentration in Software Engineering and will satisfy the Systems course area requirement. Prerequisites: 18652 or instructor permission",
+        "instructor": "Peraire, Cecile",
+        "weekday": 2,
+        "start": 14,
+        "end": 15,
+        "capacity": 50,
+        "room": 109,
+        "unit": 12
+    }
+},
+{
+    "model": "courses.course",
+    "pk": 7,
+    "fields": {
+        "number": "18655",
+        "name": "Service Oriented Computing",
+        "desc": "Service Oriented Computing (SOC) is a one-semester course that introduces how to build and leverage software systems as a service to facilitate reusability, scalability, availability, and interoperability, in a networked environment. SOC has been significantly changing the way how software systems and applications are analyzed, architected, designed, implemented, tested, evaluated, delivered, consumed, maintained and evolved. Its comprising techniques have enabled the emergence of the contemporary third-generation software engineering: Service Oriented Software Engineering (SOSE). In this course, key concepts and standards, core enabling technologies and innovative consulting methods, as well as major solution patterns, are captured in the whole lifecycle of SOSE. Research and practical projects build upon one another. Please note that this course is intended for ECE master students with a concentration in Software Engineering and will satisfy the Software Engineering and Design area requirement. Prerequisites: Proficiency with at least one modern programming language and in modern programming concepts.",
+        "instructor": "Zhang, Jia",
+        "weekday": 2,
+        "start": 8,
+        "end": 9,
+        "capacity": 20,
+        "room": 108,
+        "unit": 12
+    }
+},
+{
+    "model": "courses.course",
+    "pk": 8,
+    "fields": {
+        "number": "18733",
+        "name": "Applied Cryptography",
+        "desc": "Basic probability concepts : Probability space, simple and compound events, statistical independence, and Bayes Rule. Total Probability Concept; Bernoulli trials; Poisson Law. De Moivre-Laplace Theorem. Definition of a Random Variable (RV); Probability distribution of an RV: cumulative distribution function (CDF) and probability density function (PDF). Two Random Variables; several Random Variables. Functions of RV?s; conditional distributions; conditional expectations; joint distributions. Moments, generating functions, and characteristic functions of RVs. Chebyshev inequality. Estimation; linear estimation; minimum mean square estimation; and orthogonality principle. Limit theorems; Central Limit Theorem; Law of Large Numbers (both strong LLN and Weak LLN). Definition of a Random Process (RP). Different notions of stationarity. Poisson and Gaussian processes. Autocorrelation and Power Spectral Density (PSD) of an RP. Processing of random (stochastic) processes by linear systems. Ergodicity. Spectral analysis. Matched Filtering. Selected applications from telecommunications, data networking (queuing), Kalman filtering.",
+        "instructor": "Gligor, Virgil",
+        "weekday": 6,
+        "start": 14,
+        "end": 16,
+        "capacity": 20,
+        "room": 111,
+        "unit": 12
+    }
+},
+{
+    "model": "courses.course",
+    "pk": 9,
+    "fields": {
+        "number": "18999",
+        "name": "ECE Alternative Teaching Assistantship",
+        "desc": "Students will be apply to TA for this course after speaking with the Academic Services Center (coursehub@ece.cmu.edu) about any TAships which are not directly covered in the ECE TA Application Process. If a student plans to TA for a course and does not see the course listed in the application, they should apply to TA 18999.",
+        "instructor": "Marculescu, Diana",
+        "weekday": 4,
+        "start": 8,
+        "end": 9,
+        "capacity": 10,
+        "room": 110,
+        "unit": 12
+    }
+},
+{
+    "model": "courses.course",
+    "pk": 10,
+    "fields": {
+        "number": "53603",
+        "name": "Game Design Fundamentals",
+        "desc": "This course offers and introduction to the fundamentals of game design through lectures and by building of non-electronic games in a collaborative workshop environment. Topics covered include: history of computer games, writing rules, play balance, statistics and probabilities, layout and level design, psychology and re-playability, atmosphere, design documents and multiplayer issues.",
+        "instructor": "Librande, Stephen",
+        "weekday": 1,
+        "start": 10,
+        "end": 12,
+        "capacity": 30,
+        "room": 201,
         "unit": 12
     }
 }

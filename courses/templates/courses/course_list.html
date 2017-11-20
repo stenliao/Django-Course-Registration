@@ -2,10 +2,13 @@
 {% block content %}
 <div class="table-responsive">
         <table  class="table-striped table-bordered">
-            <thead><td>Name</td><td>Instructor</td><td>Date/Time</td><td>Unit</td></thead>
+            <thead><td>Number</td><td>Name</td><td>Instructor</td><td>Date/Time</td><td>Unit</td></thead>
             <tbody>
                 {% for course in courses %}
                 <tr>
+                <td>
+                    <a href="{% url 'course_detail' pk=course.pk %}">{{ course.number }}</a>
+                </td>
                 <td>
                     <a href="{% url 'course_detail' pk=course.pk %}">{{ course.name }}</a>
                 </td>
@@ -21,5 +24,5 @@
                 {% endfor %}
             </tbody>
         </table>
-
+</div>
 {% endblock content %}

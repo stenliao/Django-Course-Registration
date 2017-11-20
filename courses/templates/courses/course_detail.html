@@ -14,6 +14,7 @@
         <tr><td>Capacity</td><td>{{ course.capacity }}</td></tr>
         <tr><td>Unit</td><td>{{ course.unit }}</td></tr>
         <tr><td>Room</td><td>{{ course.room }}</td></tr>
+        {% if user.is_authenticated %}
         <tr><td>Status</td><td>
         {% if isExist %}
         Registered
@@ -29,6 +30,7 @@
                 {% endif %}
             </td>
         </tr>
+        {% endif %}
         </tbody>
     </table>
 {% endblock %}

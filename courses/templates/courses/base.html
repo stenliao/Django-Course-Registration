@@ -15,10 +15,12 @@
     <ul>
         {% if user.is_authenticated %}
         <li>User: {{ user.get_username }}</li>
+        <li><a href="/">Courses List</a></li>
         <li><a href="{% url 'courses.views.course_new' %}"><span>Add New Course</span></a></li>
         <li><a href="{% url 'courses.views.user_detail' pk=user.pk %}"><span>My Schedule</span></a></li>
         <li><a href="{% url 'logout'%}?next={{request.path}}">Logout</a></li>
         {% else %}
+        <li><a href="/">Courses List</a></li>
         <li><a href="{% url 'login'%}?next={{request.path}}">Login</a></li>
         {% endif %}
     </ul>

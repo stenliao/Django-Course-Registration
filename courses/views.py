@@ -19,7 +19,9 @@ def course_list(request):
 
 def course_detail(request, pk):
     course = get_object_or_404(Course, pk=pk)
-    isExist = EnrollList.objects.isExist(pk, request.user.pk)
+    isExist = False
+    if request.user.is_authenticated():
+        isExist = EnrollList.objects.isExist(pk, request.user.pk)
     print isExist
     return render(request, 'courses/course_detail.html', {'course': course, 'isExist': isExist})
 

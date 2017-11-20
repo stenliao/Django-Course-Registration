@@ -32,7 +32,7 @@
                 {% if user.is_authenticated %}
                 <li>User: {{ user.get_username }}</li>
                 <li><a href="/"><span class="glyphicon glyphicon-list-alt"> Courses List</span></a></li>
-                <li><a href="{% url 'courses.views.course_new' %}"><span class="glyphicon glyphicon-plus"> Add New Course</span></a></li>
+                <li><a href="{% url 'courses.views.course_new' %}"><span class="glyphicon glyphicon-plus"> Create New Course</span></a></li>
                 <li><a href="{% url 'courses.views.user_detail' pk=user.pk %}"><span class="glyphicon glyphicon-calendar"> My Schedule</span></a></li>
                 <li><a href="{% url 'logout'%}?next={{request.path}}"><span class="glyphicon glyphicon-log-out"> Logout</span></a></li>
                 {% else %}

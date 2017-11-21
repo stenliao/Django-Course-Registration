@@ -30,7 +30,7 @@
             <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
                 {% if user.is_authenticated %}
-                <li>User: {{ user.get_username }}</li>
+                <li><a href="#"><span class="glyphicon glyphicon-user"> {{ user.get_username }}</span></a></li>
                 <li><a href="/"><span class="glyphicon glyphicon-list-alt"> Courses List</span></a></li>
                 <li><a href="{% url 'courses.views.course_new' %}"><span class="glyphicon glyphicon-plus"> Create New Course</span></a></li>
                 <li><a href="{% url 'courses.views.user_detail' pk=user.pk %}"><span class="glyphicon glyphicon-calendar"> My Schedule</span></a></li>
